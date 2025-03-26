@@ -1,0 +1,30 @@
+[project]
+name = "processor"
+version = "0.1.0"
+description = "Data processing packages comparison (pandas vs polars) API project."
+authors = [
+    {name = "Arowosegbe Victor",email = "iyanuvicky@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.115.8,<0.116.0)",
+    "polars (>=1.23.0,<2.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "openpyxl (>=3.1.5,<4.0.0)",
+    "requests (>=2.32.3,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.vizs.dependencies]
+matplotlib = "^3.10.1"
+seaborn = "^0.13.2"
+plotly = "^6.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+
