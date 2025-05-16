@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Json Credentials
+*.json
+
+# Text files
+*.txt
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv
+env/
+ENV/
+.env
+
+# Poetry
+.poetry/
+# poetry.lock
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Downloaded data
+data/
+output/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log
+
