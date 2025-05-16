@@ -1,11 +1,34 @@
-# Projects
-This repo is for all projects completed and available for examination, review and additions. Consider this my official repository.
+## 📦 Projects Overview
 
+### 1. Data Processing API
+- **Description**: Processed an e-commerce dataset to extract valuable business insights.
+- **Tech Stack**: Pandas, Polars, FastAPI
+- **Features**:
+  - Data cleaning and transformation
+  - API endpoints to access analytical insights
+  - Optimized for performance and scalability
 
-## Summary
-```
-Data Processing Api: An ecommerce dataset was processed and insights gleaned was made available via API endpoints
-Web Scraping Api: Extracted weather data, performed cleaning and transformation and viewed results using FastApi.
-ETL_pipeline: Extracted movies data from RapidAPI. Cleaned, transformed and joined the extracted datasets and loaded into postgreSQL database. The ETL pipeline and insights is accessible via FastAPI endpoints
-Ecommerce_api: Worked on an ecommerce dataset using ETL make the dataset usable for insights generation. Generated insights are available via FastAPI endpoints
-```
+### 2. Web Scraping API
+- **Description**: Scraped and processed weather data from an online source.
+- **Tech Stack**: BeautifulSoup, Requests, Pandas, FastAPI
+- **Features**:
+  - Automated scraping of weather metrics
+  - Data cleaning and transformation
+  - FastAPI endpoints for real-time data access
+
+### 3. ETL Pipeline (Movies Dataset)
+- **Description**: Built an end-to-end ETL pipeline using movie data from RapidAPI.
+- **Tech Stack**: Requests, BeautifulSoup, Python, PostgreSQL, FastAPI, SQLAlchemy ORM
+- **Features**:
+  - Extracted and joined multiple datasets
+  - Cleaned and transformed data
+  - Loaded final dataset into a PostgreSQL database
+  - Exposed insights via RESTful API endpoints
+
+### 4. Ecommerce API
+- **Description**: Designed an ETL workflow for an ecommerce dataset, making it ready for analytics.
+- **Tech Stack**: Pandas, FastAPI, SQLAlchemy ORM, PostgreSQL
+- **Features**:
+  - Cleaned and enriched product and sales data
+  - Generated insights like top-selling products, sales by region, and more
+  - API endpoints for accessing processed insights
