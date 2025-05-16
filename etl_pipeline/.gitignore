@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv
+env/
+ENV/
+.env
+
+# Poetry
+.poetry/
+# poetry.lock
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Downloaded data
+# data/
+output/
+31-03-25 Call.csv
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+alchemy_learning.ipynb
+*.ipynb
+
+# Logs
+*.log
