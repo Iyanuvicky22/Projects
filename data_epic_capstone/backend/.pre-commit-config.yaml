@@ -1,0 +1,57 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        files: ^backend/
+        exclude: ^(etl|tests|pyproject\.toml)
+      - id: end-of-file-fixer
+        files: ^backend/
+        exclude: ^(etl|tests|pyproject\.toml)
+      - id: check-yaml
+        files: ^backend/
+        exclude: ^(etl|tests|pyproject\.toml)
+      - id: detect-private-key
+        files: ^backend/
+        exclude: ^(etl|tests|pyproject\.toml)
+
+  - repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+      - id: black
+        args: [--line-length=88]
+        files: ^backend/.*\.py$
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.10.0
+    hooks:
+      - id: isort
+        language_version: python3
+        args: [--profile=black]
+        types: [python]
+        files: ^backend/.*\.py$
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+      - id: flake8
+        files: ^backend/.*\.py$
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: bash -c "cd backend && python -m pylint ."
+        language: system
+        types: [python]
+        files: ^backend/.*\.py$
+        require_serial: true
+
+      - id: pytest
+        name: pytest
+        entry: bash -c "cd backend && python -m pytest --tb=short ."
+        language: system
+        always_run: false
+        pass_filenames: false
+        files: ^backend/.*\.py$
+        types: [python]

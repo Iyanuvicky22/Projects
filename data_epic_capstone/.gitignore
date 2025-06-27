@@ -1,0 +1,38 @@
+# Virtual environment
+venv/
+
+# add .env to .gitignore if you are using a virtual environment
+.env
+
+# Poetry cache
+.cache/pypoetry/
+*poetry.lock
+
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Distribution files
+dist/
+build/
+*.egg-info/
+.env
+
+# IDE/editor specific files
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Backup files
+*~
+.*~
+
+# Operating system specific files (e.g., macOS, Windows)
+.DS_Store
+Thumbs.db
+etl/ai_tools_scraped.csv
+etl/etl_job.ipynb
+.csv

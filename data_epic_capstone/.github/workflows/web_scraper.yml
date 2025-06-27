@@ -1,0 +1,68 @@
+name: Scheduled Scraper
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:  # Manual trigger support
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+      env:
+        POETRY_HOME: ${{ github.workspace }}/.poetry
+
+    - name: Add Poetry to PATH
+      run: echo "${{ github.workspace }}/.poetry/bin" >> $GITHUB_PATH
+
+    - name: Install dependencies
+      run: poetry install --no-root
+
+    - name: Run the scraper
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+      run: poetry run python web_scraper.py
+      working-directory: ./etl
+
+
+    - name: Run Idempotent etl jobs
+      env:
+        DB_NAME: ${{ secrets.DB_NAME }}
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_PORT: ${{ secrets.DB_PORT }}
+        DB_HOST: ${{ secrets.DB_HOST }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+      run: poetry run python idempotent_etl_job.py
+      working-directory: ./etl
+
+
+
+    - name: Commit scraped data
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add etl/downloads/*.csv
+        git diff --cached --quiet || git commit -m "Update scraped data [cron]"
+        git push
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

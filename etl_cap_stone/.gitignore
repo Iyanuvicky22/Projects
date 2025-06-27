@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv
+env/
+ENV/
+.env
+
+# Poetry
+.poetry/
+poetry.lock
+pyproject.toml
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter notebooks
+*.ipynb
+
+# Other Files
+.txt

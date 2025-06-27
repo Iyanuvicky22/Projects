@@ -1,0 +1,6 @@
+pandas
+dotenv
+requests
+pyarrow
+fastparquet
+plotly.express
