@@ -36,10 +36,10 @@ Below is a curated overview of the projects in this repository, grouped by theme
 
 ##  Why These Projects Matter
 
-- **Automation-first mindset**: Multiple projects integrate CI/CD, scripting, and cloud orchestration, reflecting your ambition to build scalable and maintainable pipelines.
-- **Data science at the core**: From e-commerce analytics to scraping and transformation, you've put data insights front and center.
-- **Modern tooling and architecture**: You're using FastAPI, SQLAlchemy, PostgreSQL, and frameworks like Polars—all critical in today's data workflows.
-- **Full-stack capability**: You build both the backend data pipelines and the APIs that expose analytics—this breadth is valuable.
+- **Automation-first mindset**: Multiple projects integrate CI/CD, scripting, and cloud orchestration, reflecting my ambition to build scalable and maintainable pipelines.
+- **Data science at the core**: From e-commerce analytics to scraping and transformation, I have put data insights front and center.
+- **Modern tooling and architecture**: I have used and using FastAPI, SQLAlchemy, PostgreSQL, and frameworks like Polars—all critical in today's data workflows.
+- **Full-stack capability**: I build both the backend data pipelines and the APIs that expose analytics—showing my breadth of data science practice and capabilities.
 
 ---
 
@@ -63,6 +63,7 @@ Below is a curated overview of the projects in this repository, grouped by theme
 ##  Connect with Me
 
 Feel free to reach out — I'd love to discuss data engineering, automation workflows, or cloud-native ETL practices.
+[iyanuvicky@gmail.com]
 
 ---
 
