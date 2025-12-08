@@ -30,7 +30,7 @@ Below is a curated overview of the projects in this repository, grouped by theme
 ###  Team & Soft-Skills Projects
 | Project | Overview |
 |---------|----------|
-| **team_agile** | Demonstrates agile team collaboration principles—perhaps including documentation, role-play, or process design. |
+| **team_agile** | Demonstrates agile team collaboration principles— including documentation, role-play, or process design in a AWS based data engineering project|
 
 ---
 
@@ -39,7 +39,7 @@ Below is a curated overview of the projects in this repository, grouped by theme
 - **Automation-first mindset**: Multiple projects integrate CI/CD, scripting, and cloud orchestration, reflecting my ambition to build scalable and maintainable pipelines.
 - **Data science at the core**: From e-commerce analytics to scraping and transformation, I have put data insights front and center.
 - **Modern tooling and architecture**: I have used and using FastAPI, SQLAlchemy, PostgreSQL, and frameworks like Polars—all critical in today's data workflows.
-- **Full-stack capability**: I build both the backend data pipelines and the APIs that expose analytics—showing my breadth of data science practice and capabilities.
+- **Full-stack capability**: I built both the backend data pipelines and the APIs that expose analytics—showing my breadth of data science practice and capabilities.
 
 ---
 
@@ -54,7 +54,7 @@ Below is a curated overview of the projects in this repository, grouped by theme
 
 ##  What's Next (Growth Plan)
 
-- Expand `data_epic_capstone` with an **ETL dashboard** (see previous suggestions) and make it deployable via Netlify or a cloud provider.
+- Expand `data_epic_capstone` with an **ETL dashboard**  and make it deployable via Netlify or a cloud provider.
 - Add **README badges** per project—for CI status, main language, or live API links.
 - Enhance docs with **architecture diagrams** (Mermaid or PNG) to visualize workflows.
 
