@@ -13,7 +13,7 @@ Below is a curated overview of the projects in this repository, grouped by theme
 |---------|----------|
 | **data_epic_capstone** | AI agents directory with EC2/S3 automation (Bash, PowerShell, GitHub Actions). Part of a larger ETL orchestration setup. |
 | **etl_pipeline** | End-to-end ETL workflow: Extract data, transform with Pandas, and load into PostgreSQL. FastAPI API layer included. |
-| **aws_project** | Utilities and scripts targeting AWS automation — likely involving EC2/S3, IAM, or infrastructure provision. |
+| **aws_project** | Utilities and scripts targeting AWS automation — involving EC2/S3, IAM, or infrastructure provision. |
 
 ###  Data Processing & API Services
 | Project | Overview |
